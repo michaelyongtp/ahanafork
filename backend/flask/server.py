@@ -63,9 +63,15 @@ from modules.flashcards import FlashcardModule
 flashcard_module = FlashcardModule()
 flashcard_module.register_routes(app)
 
+from modules.cram import CramModule
+cram_module = CramModule()
+cram_module.register_routes(app)
+
 from modules.library import LibraryTexts
 library_texts_module = LibraryTexts()
 library_texts_module.register_routes(app)
+
+
 
 
 # --------------- End of Class imports ---------------- #

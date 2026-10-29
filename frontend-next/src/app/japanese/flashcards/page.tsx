@@ -13,6 +13,7 @@ import ComplexFlashcardModalGrammarFlask from "@/components/ComplexFlashcardModa
 
 import { useUser } from "@/context/UserContext";
 import LoginButton from "@/components/LoginButton";
+import Link from "next/link";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -249,6 +250,12 @@ export default function Home() {
       {/* Grammar JLPT N3 Section */}
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Grammar Flashcards</h2>
+        <Link
+          href="/japanese/cram"
+          className="mb-4 inline-block rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-blue-600"
+        >
+          Cram grammar
+        </Link>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {["JLPT_N5", "JLPT_N4", "JLPT_N3", "JLPT_N2", "JLPT_N1"].map(
             (part, index) => (
